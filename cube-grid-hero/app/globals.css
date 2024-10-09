@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 210 9% 45%;
+    --foreground: 0 0% 0%;
+    --card: 210 9% 45%;
+    --card-foreground: 0 0% 0%;
+    --popover: 210 9% 45%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 24 100% 48%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 210 9% 45%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 210 9% 35%;
+    --muted-foreground: 0 0% 0%;
+    --accent: 210 9% 35%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 0%;
+    --border: 210 9% 35%;
+    --input: 210 9% 35%;
+    --ring: 24 100% 48%;
+    --radius: 0.5rem;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#6C757D] text-foreground;
+  }
+}
+
+.font-dela-gothic-one {
+  font-family: var(--font-dela-gothic-one);
+}
+
+@keyframes bounce-right {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+}
+
+.arrow-icon {
+  animation: bounce-right 1s infinite;
+  transition: transform 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #FB8C00 !important;
+}
+
+.submit-button:hover .arrow-icon {
+  animation: none;
+  transform: translateX(5px);
+}
+
+.get-free-stuff-button {
+  @apply hover:text-black;
+}
+
+.get-free-stuff-button:hover {
+  background-color: #E6F3FF !important;
+}
+
+.gradient-text {
+  background: linear-gradient(to bottom, #212121 30%, #000000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Rest of your existing CSS */
